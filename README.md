@@ -36,17 +36,17 @@ https://github.com/NKBelie/27174_Belie_NDAYISABA_KAMARIZA_GrpA
 
 ## Pre-Lab Answers
 
-Q1. Difference between sudo su and su -
+### Q1. Difference between sudo su and su -
 
 sudo su switches to the root user using your current user’s sudo privileges, without fully loading root’s environment. It keeps most of your current user’s environment variables.
 
 su - switches to the root user and loads the full root environment, including root’s PATH, home directory, and shell settings. It requires the root password instead of sudo privileges.
 
-Q2. Why do we use SSH keys instead of passwords for remote login?
+### Q2. Why do we use SSH keys instead of passwords for remote login?
 
 SSH keys are more secure because they use cryptographic key pairs instead of passwords that can be guessed or brute-forced. The private key stays on the user’s machine and is never sent over the network, making interception nearly impossible. They also allow stronger authentication and easier automation.
 
-Q3. What does chmod 600 ~/.ssh/authorized_keys do and why is it required?
+### Q3. What does chmod 600 ~/.ssh/authorized_keys do and why is it required?
 
 chmod 600 sets file permissions so that only the owner can read and write the file, while all other users have no access.
 
@@ -54,11 +54,11 @@ SSH requires this because if other users can read or modify authorized_keys, the
 
 ## Post-Lab Questions Answers
 
-PQ1. Why is unattended apt upgrade -y risky in production?
+### PQ1. Why is unattended apt upgrade -y risky in production?
 
 Unattended upgrades can break running services because updates may introduce incompatible changes or restart critical services unexpectedly. This can cause downtime or system instability. In real organizations, upgrades are handled using staged environments (dev → staging → production), scheduled maintenance windows, and controlled package versioning to ensure stability before deployment.
 
-PQ2. What happens if you skip the UFW firewall step?
+### PQ2. What happens if you skip the UFW firewall step?
 
 If UFW is not enabled, all ports may remain open to the internet, making the server vulnerable to attacks.
 
@@ -71,6 +71,6 @@ Change default SSH port (22 → custom port)
 Restrict access by IP address
 Use fail2ban to block repeated failed login attempts
 
-PQ3. Why is storing infrastructure setup in Git better than manual commands?
+### PQ3. Why is storing infrastructure setup in Git better than manual commands?
 
 Using Git ensures reproducibility because the same script can be executed multiple times to produce identical environments. It also improves teamwork since multiple developers can review, modify, and track changes collaboratively. Additionally, Git provides an audit trail, making it easy to see who changed what and when, which is essential for debugging and compliance in real systems.
