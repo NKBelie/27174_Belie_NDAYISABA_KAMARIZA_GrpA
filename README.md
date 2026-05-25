@@ -28,11 +28,11 @@ https://github.com/NKBelie/27174_Belie_NDAYISABA_KAMARIZA_GrpA
 
 ## Screenshots- screenshots/checkpoint1.png — sshd_config settings (Checkpoint 1)
 
-![alt text](image.png)
+![alt text](checkpoint1.jpg)
 
 ## screenshots/checkpoint2.png — NGINX welcome page (Checkpoint 2)
 
-![alt text](image-1.png)
+![alt text](checkpoint2.jpg)
 
 ## Pre-Lab Answers
 
